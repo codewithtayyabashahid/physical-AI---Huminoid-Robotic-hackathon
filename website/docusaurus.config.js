@@ -6,7 +6,7 @@ const config = {
   title: 'Physical AI and Humanoid Robotics',
   tagline: 'A Comprehensive Guide to Embodied Intelligence',
   favicon: 'img/favicon.ico',
-  url: 'https://github.com/codewithtayyabashahid',
+  url: 'https://your-username.github.io',
   baseUrl:'/',
   organizationName: 'panaversity',
   projectName: 'panaversity-hackathon',
