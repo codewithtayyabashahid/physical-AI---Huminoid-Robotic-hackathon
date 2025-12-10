@@ -7,7 +7,7 @@ const config = {
   tagline: 'A Comprehensive Guide to Embodied Intelligence',
   favicon: 'img/favicon.ico',
   url: 'https://your-username.github.io',
-  baseUrl: '/panaversity-hackathon/',
+  baseUrl:'https://physical-ai-huminoid-robotic-hackat-zeta.vercel.app/',
   organizationName: 'panaversity',
   projectName: 'panaversity-hackathon',
   onBrokenLinks: 'warn',
