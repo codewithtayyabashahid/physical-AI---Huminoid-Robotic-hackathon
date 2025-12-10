@@ -1,0 +1,129 @@
+/* Custom CSS for Panaversity Hackathon - Dark Futuristic Theme with Neon Accents */
+/* Fonts: Inter for body, Poppins for headings - loaded from Google Fonts or system fallbacks */
+
+:root {
+  --ifm-color-primary: #00d9ff;
+  --ifm-color-primary-dark: #00c3e6;
+  --ifm-color-primary-darker: #00b8d9;
+  --ifm-color-primary-darkest: #0098b3;
+  --ifm-color-primary-light: #1ae0ff;
+  --ifm-color-primary-lighter: #33e5ff;
+  --ifm-color-primary-lightest: #66ebff;
+  --ifm-code-font-size: 95%;
+  --ifm-font-family-base: 'Inter', -apple-system, system-ui, sans-serif;
+  --ifm-heading-font-family: 'Poppins', 'Inter', sans-serif;
+  --ifm-background-color: #0a0e27;
+  --ifm-navbar-background-color: rgba(10, 14, 39, 0.95);
+  --ifm-footer-background-color: #050818;
+}
+
+/* Global dark background */
+body {
+  background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
+  color: #e0e6ed;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* Hero title with gradient text effect */
+.hero-title {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 800;
+  background: linear-gradient(135deg, #00d9ff 0%, #b794f6 50%, #ff6ec7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  text-align: center;
+}
+
+/* Sidebar styling with glassmorphism */
+.sidebar {
+  background: rgba(15, 20, 45, 0.7);
+  backdrop-filter: blur(12px);
+  border-right: 1px solid rgba(0, 217, 255, 0.2);
+  padding: 1.5rem;
+  min-height: 100vh;
+}
+
+/* Neon button effect */
+.neon-btn {
+  background: linear-gradient(135deg, #00d9ff 0%, #7c3aed 100%);
+  border: none;
+  border-radius: 12px;
+  padding: 0.75rem 2rem;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 20px rgba(0, 217, 255, 0.4);
+  font-size: 1rem;
+}
+
+.neon-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 30px rgba(0, 217, 255, 0.7);
+}
+
+/* Card styling with subtle glow */
+.card {
+  background: rgba(26, 31, 58, 0.8);
+  border: 1px solid rgba(0, 217, 255, 0.15);
+  border-radius: 16px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 217, 255, 0.4);
+  box-shadow: 0 8px 32px rgba(0, 217, 255, 0.2);
+}
+
+/* AI Assistant floating button */
+.ai-btn {
+  position: fixed;
+  top: 1.5 rem;
+  right: 1.5rem;
+  background: linear-gradient(135deg, #00d9ff 0%, #b794f6 100%);
+  padding: 0.75rem 1.5rem;
+  border-radius: 24px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 4px 20px rgba(0, 217, 255, 0.5);
+  border: none;
+  font-size: 0.95rem;
+}
+
+/* Glassmorphism utility class */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Gradient text utility */
+.gradient-text {
+  background: linear-gradient(90deg, #00d9ff, #b794f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+  .sidebar {
+    min-height: auto;
+  }
+  .ai-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+}

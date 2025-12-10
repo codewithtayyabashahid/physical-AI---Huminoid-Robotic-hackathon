@@ -1,0 +1,11 @@
+{
+  "name": "panaversity-hackathon",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "cd website && pnpm start",
+    "build": "cd website && pnpm build",
+    "deploy": "bash deploy.sh"
+  },
+  "license": "MIT"
+}

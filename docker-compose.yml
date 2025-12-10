@@ -1,0 +1,50 @@
+# Docker Compose configuration for local development environment
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: panaversity-postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: panaversity
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - panaversity-network
+
+  qdrant:
+    image: qdrant/qdrant:latest
+    container_name: panaversity-qdrant
+    ports:
+      - "6333:6333"
+      - "6334:6334"
+    volumes:
+      - qdrant_data:/qdrant/storage
+    networks:
+      - panaversity-network
+
+  app:
+    build: ./app
+    container_name: panaversity-app
+    environment:
+      - DATABASE_URL=postgresql://postgres:postgres@postgres:5432/panaversity
+      - QDRANT_URL=http://qdrant:6333
+    ports:
+      - "8000:8000"
+    depends_on:
+      - postgres
+      - qdrant
+    networks:
+      - panaversity-network
+
+volumes:
+  postgres_data:
+  qdrant_data:
+
+networks:
+  panaversity-network:
+    driver: bridge
