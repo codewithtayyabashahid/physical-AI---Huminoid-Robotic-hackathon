@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "cd website && pnpm start",
-    "build": "cd website && pnpm build",
+    "build": "cd website && pnpm install && pnpm build",
     "deploy": "bash deploy.sh"
   },
   "license": "MIT"
