@@ -60,7 +60,7 @@ const config = {
       },
       footer: {
         style: 'dark',
-        copyright: `Copyright © ${new Date().getFullYear()} Tayyaba Shahid. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Laiba Shahid. Built with Docusaurus.`,
       },
       colorMode: {
         defaultMode: 'dark',
