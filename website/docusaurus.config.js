@@ -6,10 +6,13 @@ const config = {
   title: 'Physical AI and Humanoid Robotics',
   tagline: 'A Comprehensive Guide to Embodied Intelligence',
   favicon: 'img/favicon.ico',
-  url: 'https://your-username.github.io',
-  baseUrl:'/',
+
+  // GitHub Pages config
+  url: 'https://panaversity.github.io',
+  baseUrl: '/panaversity-hackathon/',
   organizationName: 'panaversity',
   projectName: 'panaversity-hackathon',
+
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
@@ -21,8 +24,7 @@ const config = {
   presets: [
     [
       'classic',
-      /** @type {any} */
-      ({
+      {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           routeBasePath: 'docs',
@@ -31,39 +33,37 @@ const config = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
-      }),
+      },
     ],
   ],
 
-  themeConfig:
-    /** @type {any} */
-    ({
-      navbar: {
-        title: 'Physical AI & Robotics',
-        items: [
-          {
-            type: 'doc',
-            docId: 'chapters/01-physical-ai',
-            position: 'left',
-            label: 'Book',
-          },
-          {
-            href: 'https://github.com/panaversity/panaversity-hackathon',
-            label: 'GitHub',
-            position: 'right',
-          },
-        ],
-      },
-      footer: {
-        style: 'dark',
-        copyright: `Copyright © ${new Date().getFullYear()}. Built with Docusaurus.`,
-      },
-      colorMode: {
-        defaultMode: 'dark',
-        disableSwitch: true,
-        respectPrefersColorScheme: false,
-      },
-    }),
+  themeConfig: {
+    navbar: {
+      title: 'Physical AI & Robotics',
+      items: [
+        {
+          type: 'doc',
+          docId: 'chapters/01-physical-ai',
+          position: 'left',
+          label: 'Book',
+        },
+        {
+          href: 'https://github.com/panaversity/panaversity-hackathon',
+          label: 'GitHub',
+          position: 'right',
+        },
+      ],
+    },
+    footer: {
+      style: 'dark',
+      copyright: `Copyright © ${new Date().getFullYear()}. Built with Docusaurus.`,
+    },
+    colorMode: {
+      defaultMode: 'dark',
+      disableSwitch: true,
+      respectPrefersColorScheme: false,
+    },
+  },
 };
 
 module.exports = config;
