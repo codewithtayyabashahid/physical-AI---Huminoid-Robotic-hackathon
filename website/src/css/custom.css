@@ -85,8 +85,8 @@ body {
 /* AI Assistant floating button */
 .ai-btn {
   position: fixed;
-  top: 1.5 rem;
-  right: 1.5rem;
+  top: 80px;  /* Below navbar */
+  right: 2rem;
   background: linear-gradient(135deg, #00d9ff 0%, #b794f6 100%);
   padding: 0.75rem 1.5rem;
   border-radius: 24px;
@@ -97,6 +97,12 @@ body {
   box-shadow: 0 4px 20px rgba(0, 217, 255, 0.5);
   border: none;
   font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.ai-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(0, 217, 255, 0.7);
 }
 
 /* Glassmorphism utility class */
@@ -112,6 +118,15 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+/* Fix background for full page coverage */
+main {
+  min-height: 100vh;
+}
+
+article {
+  min-height: 100vh;
 }
 
 /* Responsive adjustments */
