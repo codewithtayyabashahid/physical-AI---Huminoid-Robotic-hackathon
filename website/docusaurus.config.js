@@ -9,7 +9,7 @@ const config = {
 
   // GitHub Pages config
   url: 'https://panaversity.github.io',
-  baseUrl: '/panaversity-hackathon/',
+  baseUrl: '/',
   organizationName: 'panaversity',
   projectName: 'panaversity-hackathon',
 
